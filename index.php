@@ -6,8 +6,10 @@
  * Time: 01:46 PM
  */
 
-use App\controllers\models\indexModel;
-
 require_once "vendor/autoload.php";
-$model = new indexModel();
-echo $model->index();
+
+define("DS",DIRECTORY_SEPARATOR);
+define("ROOT",realpath(dirname(__FILE__)).DS);
+define("APP_PATH",ROOT.'app'.DS);
+
+
