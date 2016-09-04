@@ -9,7 +9,7 @@
 namespace App;
 
 
-class Controller
+abstract class Controller
 {
-
+    abstract public function index();
 }

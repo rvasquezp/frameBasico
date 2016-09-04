@@ -9,7 +9,4 @@
 namespace App;
 
 
-class Config
-{
-
-}
+define("DEFAULT_CONTROLLER",'index');

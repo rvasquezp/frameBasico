@@ -6,10 +6,13 @@
  * Time: 04:37 PM
  */
 
-namespace App\controllers;
 
-
-class indexController
+class indexController extends \App\Controller
 {
-
+    public function index(){
+        echo "hola mundo";
+    }
+    public function gato(){
+        echo "holas";
+    }
 }
