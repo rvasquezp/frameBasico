@@ -10,9 +10,9 @@
 class indexController extends \App\Controller
 {
     public function index(){
-        echo "hola mundo";
+        $this->_view->renderizar('index');
     }
-    public function gato(){
-        echo "holas";
+    public function post(){
+        $this->_view->renderizar('post');
     }
 }
