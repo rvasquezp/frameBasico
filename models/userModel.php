@@ -6,10 +6,11 @@
  * Time: 04:38 PM
  */
 
-namespace App\models;
 
 
-class userModel
+class userModel extends \App\Model
 {
-
+    public function getUser(){
+        return $this->_db->query("Select * from posts")->fetchAll();
+    }
 }

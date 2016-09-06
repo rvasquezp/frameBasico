@@ -13,6 +13,13 @@ class indexController extends \App\Controller
         $this->_view->renderizar('index');
     }
     public function post(){
-        $this->_view->renderizar('post');
+        try{
+            $modelo= $this->loadModel('user');
+            $this->_view->user = $modelo->getUser();
+            $this->_view->renderizar('post');
+        }catch (Exception $e){
+           die($e->getMessage());
+        }
+
     }
 }
