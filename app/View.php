@@ -33,7 +33,7 @@ class View
             array(
                 'id' => 'post',
                 'titulo' => 'Post',
-                'url' => SITE_URL . '/index/post'
+                'url' => SITE_URL . '/post'
             ),
             array(
                 'id' => 'About',
