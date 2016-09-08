@@ -41,23 +41,32 @@
                         <th>Date</th>
                         <th>Estado</th>
                         <th>Contenido</th>
+                        <th>Accion</th>
                     </tr>
 
-                    <?php foreach ($this->posts as $post): ?>
+                    <?php if(isset($this->posts)): foreach ($this->posts as $post): ?>
                     <tr>
                         <td><?= $post['id']?></td>
                         <td><?= $post['titulo']?></td>
                         <td>11-7-2014</td>
                         <td><span class="label label-success">Approved</span></td>
-                        <td><?= substr($post['cuerpo'],0,69)?></td>
+                        <td><?= substr($post['cuerpo'],0,90)?></td>
+                        <td>
+                            <a class="btn btn-block btn-primary" href="<?= SITE_URL.'post/editar/'.$post['id']?>"><i class="fa fa-edit"></i></a>
+
+                        </td>
+                        <td>
+                            <a class="btn btn-block btn-danger" href="<?= SITE_URL.'post/eliminar/'.$post['id']?>"><i class="fa fa-remove"></i></a>
+                        </td>
+
                     </tr>
-                    <?php endforeach;?>
+                    <?php endforeach; endif;?>
                 </table>
             </div>
             <!-- /.box-body -->
 
         </div>
-        <a href="http://almsaeedstudio.com/download/AdminLTE-dist" class="btn btn-primary"><i class="fa fa-plus"></i> Insertar Nuevo Post</a>
+        <a href="<?= SITE_URL.'post/nuevo/'?>" class="btn btn-primary"><i class="fa fa-plus"></i> Insertar Nuevo Post</a>
 
     </section>
     <!-- /.content -->

@@ -215,5 +215,8 @@
 <script src=" <?= $_layoutParams['ruta_js'] ?>app.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src=" <?= $_layoutParams['ruta_js'] ?>demo.js"></script>
+<?php foreach ($_layoutParams['js'] as $js):?>
+    <script src=" <?= $js?>"></script>
+<?php endforeach;?>
 </body>
 </html>

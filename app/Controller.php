@@ -13,7 +13,6 @@ abstract class Controller
 {
     protected $_view;
 
-
     /**
      * Controller constructor.
      */
@@ -21,6 +20,7 @@ abstract class Controller
     public function __construct()
     {
         $this->_view = new View(new Request());
+        $this->_js= array();
     }
 
     abstract public function index();
@@ -49,4 +49,6 @@ abstract class Controller
             throw new \Exception("Error al cargar la libreria");
         }
     }
+
+    
 }

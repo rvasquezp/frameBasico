@@ -13,6 +13,7 @@ define("ROOT",realpath(dirname(__FILE__)).DS);
 define("APP_PATH",ROOT.'app'.DS);
 
 require_once APP_PATH.'Config.php';
+
 try{
     App\Bootstrap::run(new App\Request());
 }catch (Exception $e){
